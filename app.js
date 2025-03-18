@@ -18,18 +18,18 @@ function actualizarListaAmigos() {
         `<li class="name-item">${amigo}</li>`
     ).join('');
 }
-
+//alerta de ingresar nombres para sortear
 function sortearAmigo() {
     if (amigos.length < 1) {
         alert("Debes agregar al menos 1 amigo");
         return;
     }
 
-    // Mezcla el array y selecciona el primero
+    // sorteador
     const mezclado = [...amigos].sort(() => Math.random() - 0.5);
     const ganador = mezclado[0];
 
-    // Muestra solo el nombre sorteado
+    // muestra el nombre sorteado
     const resultado = document.getElementById('resultado');
     resultado.innerHTML = `<li class="result-item">¡El amigo secreto es: ${ganador}!</li>`;
 }
